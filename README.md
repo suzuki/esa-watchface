@@ -8,6 +8,15 @@ I like this service and love the cute character.
 Wear this cute "esa" watchface on your wrist.
 Enjoy !
 
+## Screenshot
+
+### Pebble / Pebble Steel
+
+![](screenshot/screenshot-aplite.png)
+
+### Pebble Time
+
+![](screenshot/screenshot-basalt.png)
 
 ## Notice
 
