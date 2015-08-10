@@ -1,0 +1,36 @@
+{
+  "uuid": "b41c5d13-32a4-4825-8616-19516439e6d8",
+  "shortName": "esa",
+  "longName": "esa",
+  "companyName": "0610.org",
+  "versionLabel": "1.0",
+  "sdkVersion": "3",
+  "targetPlatforms": ["aplite", "basalt"],
+  "watchapp": {
+    "watchface": true
+  },
+  "appKeys": {
+    "dummy": 0
+  },
+  "resources": {
+    "media": [
+      {
+        "characterRegex": "[ -~|｡-ﾟ]",
+        "type": "font",
+        "name": "ROUNDED_MPLUS_FONT_14",
+        "file": "fonts/rounded-mplus-1c-regular.ttf"
+      },
+      {
+        "type": "png",
+        "name": "BACKGROUND_IMAGE",
+        "file": "images/esa-background.png"
+      },
+      {
+        "menuIcon": true,
+        "type": "png",
+        "name": "IMAGE_MENU_ICON",
+        "file": "images/esa-menu-icon.png"
+      }
+    ]
+  }
+}
