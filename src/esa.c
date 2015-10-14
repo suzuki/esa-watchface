@@ -21,6 +21,18 @@ static char *s_tweets[] = {
   "ｺﾞﾛｺﾞﾛ",
   "ｱｷﾀｰ",
   "ｵｷﾀ?",
+  "ﾌｭｯ ｶｶｶｯ",
+  "ｷｬﾀﾋﾟﾝ",
+  "ﾋﾟﾖﾌｨｺ",
+  "ﾋﾟﾖﾋﾟﾖ",
+  "ｴｻｶﾅ?",
+  "ﾌｨｰ",
+  "ﾆｬｰﾝ",
+  "ｳﾏｰ",
+  "ｵﾊﾖｰ",
+  "ﾊﾅｷﾝ?",
+  "ﾒｶﾞﾈ",
+  "ﾈﾅ",
 };
 
 static void update_tweet() {
@@ -29,7 +41,7 @@ static void update_tweet() {
   if (type_rand == 0) {
     text_layer_set_text(s_tweet_layer, "#ﾄﾉｺﾄ");
   } else {
-    int text_rand = rand() % 12; // count of s_tweets
+    int text_rand = rand() % 25; // count of s_tweets
     text_layer_set_text(s_tweet_layer, s_tweets[text_rand]);
   }
 }
