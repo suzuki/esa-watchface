@@ -6,7 +6,7 @@ static TextLayer *s_watch_layer;
 static TextLayer *s_tweet_layer;
 static BitmapLayer *s_background_layer;
 static GBitmap *s_background_bitmap;
-static GFont *s_custom_font;
+static GFont s_custom_font;
 static char *s_tweets[] = {
   "ｱﾁｰ",
   "ﾕ!",
