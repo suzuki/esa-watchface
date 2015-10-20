@@ -18,6 +18,10 @@ Enjoy !
 
 ![](screenshot/screenshot-basalt.png)
 
+### Pebble Time Round
+
+![](screenshot/screenshot-chalk.png)
+
 ## Notice
 
 This watchface app is unofficial, but it use official logo data provided by esa LLC.
