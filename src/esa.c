@@ -77,19 +77,27 @@ static void window_load(Window *window) {
   Layer *window_layer = window_get_root_layer(window);
   GRect bounds = layer_get_bounds(window_layer);
 
+#if defined(PBL_RECT)
+  GRect s_watch_layer_rect = GRect(0, 100, bounds.size.w, 30);
+  GRect s_tweet_layer_rect = GRect(0, 148, bounds.size.w, 20);
+#elif defined(PBL_ROUND)
+  GRect s_watch_layer_rect = GRect(0, 106, bounds.size.w, 30);
+  GRect s_tweet_layer_rect = GRect(0, 150, bounds.size.w, 30);
+#endif
+
   s_background_bitmap = gbitmap_create_with_resource(RESOURCE_ID_BACKGROUND_IMAGE);
-  s_background_layer = bitmap_layer_create(GRect(0, 0, 144, 168));
+  s_background_layer = bitmap_layer_create(layer_get_bounds(window_layer));
   bitmap_layer_set_bitmap(s_background_layer, s_background_bitmap);
   layer_add_child(window_layer, bitmap_layer_get_layer(s_background_layer));
 
-  s_watch_layer = text_layer_create((GRect) { .origin = { 0, 100 }, .size = { bounds.size.w, 30 } });
+  s_watch_layer = text_layer_create(s_watch_layer_rect);
   text_layer_set_font(s_watch_layer, fonts_get_system_font(FONT_KEY_BITHAM_30_BLACK));
   text_layer_set_background_color(s_watch_layer, GColorClear);
   text_layer_set_text_color(s_watch_layer, GColorWhite);
   text_layer_set_text_alignment(s_watch_layer, GTextAlignmentCenter);
   layer_add_child(window_layer, text_layer_get_layer(s_watch_layer));
 
-  s_tweet_layer = text_layer_create((GRect) { .origin = {0, 148}, .size = {bounds.size.w, 20}});
+  s_tweet_layer = text_layer_create(s_tweet_layer_rect);
   text_layer_set_text_alignment(s_tweet_layer, GTextAlignmentCenter);
 
   s_custom_font = fonts_load_custom_font(resource_get_handle(RESOURCE_ID_ROUNDED_MPLUS_FONT_14));

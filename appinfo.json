@@ -3,9 +3,9 @@
   "shortName": "esa",
   "longName": "esa",
   "companyName": "0610.org",
-  "versionLabel": "1.1",
+  "versionLabel": "2.0",
   "sdkVersion": "3",
-  "targetPlatforms": ["aplite", "basalt"],
+  "targetPlatforms": ["aplite", "basalt", "chalk"],
   "watchapp": {
     "watchface": true
   },
